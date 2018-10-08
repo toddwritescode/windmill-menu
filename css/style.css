@@ -1,0 +1,57 @@
+body {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.menu-bar {
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0, 0 10px, 10px;
+    height: 50px;
+    width: 50vw;
+    background-color: hsl(205, 100%, 51%)
+}
+
+#menu-toggle-hamburger {
+    z-index: 101;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    transform: rotate(180deg);
+    transition: all 2s ease;
+}
+
+#menu-toggle-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 50px;
+}
+
+.full-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: hsl(205, 75%, 51%);
+    height: 30vh;
+    width: 50vw;
+    transform-origin: top right;
+    transform: rotate(90deg);
+    /* transform: rotate(0deg); */
+    transition: all 2s ease;
+    border-radius: 25px;
+}
+
+.full-menu-container {
+    margin: 60px 0 0 50px;
+}
+
+input[type=checkbox]:checked ~ #menu-toggle-hamburger {
+    transform: rotate(90deg);
+}
+
+input[type=checkbox]:checked ~ .full-menu {
+    transform: rotate(0deg);
+}
